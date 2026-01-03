@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        h2 { color: #1877f2; margin-bottom: 20px; }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover { background-color: #166fe5; }
+        .footer-text { margin-top: 15px; font-size: 14px; color: #606770; }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>تسجيل الدخول</h2>
+    <form id="fakeForm">
+        <input type="text" placeholder="اسم المستخدم أو البريد الإلكتروني" required>
+        <input type="password" placeholder="كلمة السر" required>
+        <button type="submit">تسجيل الدخول</button>
+    </form>
+    <p class="footer-text">نسيت كلمة السر؟</p>
+</div>
+
+<script>
+    document.getElementById('fakeForm').onsubmit = function(e) {
+        e.preventDefault(); // منع إرسال البيانات
+        alert("تعيش وتأكل غيرها! 😂\nهذا مجرد مقلب، لم يتم إرسال أي بيانات.");
+    };
+</script>
+
+</body>
+</html>
